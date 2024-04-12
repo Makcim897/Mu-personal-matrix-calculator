@@ -1,7 +1,7 @@
 import flet as ft
 
 def main(page: ft.Page):
-    page.title = "Flet counter example"
+    page.title = "matrix-calculator"
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     a11 = ft.TextField(value="0")
     a12 = ft.TextField(value="0")
@@ -24,13 +24,13 @@ def main(page: ft.Page):
         a31.value = str(int(a31.value) * multiply_num.value)
         a32.value = str(int(a32.value) * multiply_num.value)
         a33.value = str(int(a33.value) * multiply_num.value)
-    page.update()
+        page.update()
 
 
     page.add(ft.Row(controls=[a11, a12, a13]))
     page.add(ft.Row(controls=[a21, a22, a23]))
     page.add(ft.Row(controls=[a31, a32, a33]))
-    page.add(ft.Row(controls=[multiply_num, ft.IconButton(ft.icons., on_click=multiply)]))
+    page.add(ft.Row(controls=[multiply_num,ft.TextButton(text="multiply", on_click=multiply())]))
 
     page.update()
 
